@@ -1,0 +1,71 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: azure;
+    height: 100vh;
+
+}
+h1{
+    color: white;
+    background-color: cyan;
+    text-align: center;
+    padding: 1rem;
+}
+.capture-form{
+    background-color: white;
+    box-shadow: 1px 1px 1px gainsboro;
+    width: 40rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.capture-form h3{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem;
+}
+.input-container{
+    padding: .5rem;
+
+}
+.input-container label{
+    display: inline-block;
+    width: 10rem;
+    text-align: right;
+}
+.input-container input{
+    display: inline-block;
+    width: 20rem;
+    margin-left: 1rem;
+
+}
+#btnReg{
+    display: inline-block;
+    padding: .8rem;
+    border-radius: .5rem;
+    margin-left: 10rem;
+    text-decoration: none;
+    font-family: Arial;
+    text-transform: uppercase;
+    color: white;
+    background-color: cyan;
+    text-align: center;
+    border: none;
+    width: 10rem;
+}
+.alert-error{
+    border: 1px solid red;
+    background-color: crimson;
+    color: rgb(235, 99, 99);
+    padding: 5px;
+
+}
+.input-error{
+    border: 1px solid red;
+    background-color: crimson;
+}
+.hide{
+    display: none;
+}
