@@ -18,27 +18,46 @@ function isValid(user) {
          
     let valid=true;
     $('input').removeClass("input-error");
-    if (user.email.length==0) {
+    if (user.email.length == 0) {
         console.log("User not added: Add email");
         valid=false;
         $('#txtEmail').addClass("input-error");
     }
-    if (user.password.length==0) {
+    if (user.password == 0) {
         console.log("User not added: Add password");
         valid=false;
         $('#txtPassword').addClass("input-error");
     }
+      
     if(!valid){
-        console.error("missing data");
-        $("#alertError").removeClass("hide");
-        setTimeout(function(){
-            $("#alertError").addClass("hide");
-        },2000);
+        displayError("Missing data");
+   
     }
 
     return valid;
 }
-
+function validatePass() {
+    //get the value from form
+    let txtPass=$("#txtPassword");
+    let password=txtPass.val();
+    if (password.length<6) {
+        txtPass.css("border","2px solid red");//jquery function
+        console.error("Min:6 characters");
+    }else{
+        txtPass.css("border","2px solid green");//jquery function
+        hideError();
+    }
+    
+}
+function displayError(msg) {
+    //console.error("missing data");
+        $("#alertError").removeClass("hide").text(msg);
+        
+}
+function hideError() {
+        $("#alertError").addClass("hide");
+    
+}
 function register(){
     let inputFirstName= $('#txtFirstName').val();
     let inputLastName= $('#txtLastName').val();
@@ -64,7 +83,7 @@ function register(){
 function init() {
    console.log("Registration");
     //hook events
-
+    $("#txtPassword").change(validatePass);
 }
 window.onload=init;
  
