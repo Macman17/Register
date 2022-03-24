@@ -1,29 +1,30 @@
 function displayUser(users){
     //travel the array
-    let users="";
+   
     //get each user
-    for (let x = 0; x < readUser.length; x++) {
-        users+=`
-        <tr class= "Utable" id="${readUser}">
-            <td>Pet Type: ${petSalon.pet[x].petType}</td>
-            <td>Name: ${petSalon.pet[x].petName}</td>
-            <td>Age: ${petSalon.pet[x].petAge}</td>
-            <td>Gender: ${petSalon.pet[x].petGender}</td>
-            <td>Breed: ${petSalon.pet[x].petBreed}</td>
-            <td>Owner Name: ${petSalon.pet[x].petOwner}</td>
-            <td>Owner Phone Number: ${petSalon.pet[x].petOwnerPhone}</td>
-            <td>Service: ${petSalon.pet[x].petService}</td>
-            <td> <button onclick="deletePet(${petSalon.pet[x].id});">Delete</button> <td>
+    for (let x = 0; x < User.length; x++) {
+    users+=`
+        <tr class= "Utable" id="${User[x].id}">
+            <td>Pet Type: ${User[x].firstName}</td>
+            <td>Name: ${User[x].lastName}</td>
+            <td>Age: ${User[x].email}</td>
+            <td>Gender: ${User[x].age}</td>
+            <td>Breed: ${User[x].address}</td>
+            <td>Owner Name: ${User[x].cardNumber}</td>
+            <td>Owner Phone Number: ${User[x].phone}</td>
+            <td>Service: ${User[x].color}</td>
+            <td> <button onclick="deletePet(${User[x].id});">Delete</button> <td>
         </tr>
         
         `;
         
-    
+        console.log(users);
         
     }
     //display the user
-
+    document.getElementById("userTable").innerHTML=users;
     //append the user to the table
+    $("#userTable").append($("h3"));
 }
 
 function init() {

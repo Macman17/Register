@@ -1,14 +1,14 @@
 const LS_KEY="users";
 function saveUser(user) {
     //load  the old data
-    let data=readUser();
+    let data=readUsers();
     //marge old and new data
     data.push(user);
     //save
     let val= JSON.stringify(user);//parse into a JSON String
     localStorage.setItem(LS_KEY,val);//send the string to the local storage
 }
-function readUser() {
+function readUsers() {
     let data= localStorage.getItem(LS_KEY);//get data from LS
     console.log(data);// JSON
     if(!data){//is not data?
