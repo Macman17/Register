@@ -11,13 +11,14 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="register.html">Register</a>
-            <a href="user.html">User</a>
-            
+        <nav class="nav-bar">
+            <div class="links-container">
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+                <button id="userBtn" href="user.html" onclick="userLog()">User</button>
+            </div>
         </nav>
-        <h1>My Awesome User Registration System </h1>
+        <h1>User Registration System </h1>
     </header>
     <main>
         <form class="capture-form" action="#">
@@ -62,8 +63,9 @@
                 <label for="color">Color:</label>
                 <input type="color" id="txtColor">
             </div>
+            <button id="btnReg" onclick="register()">Register</button>
         </form>
-        <button id="btnReg" onclick="register()">Register</button>
+        
     </main>
     <script src="Java/storeManger.js"></script>
    

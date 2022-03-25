@@ -1,6 +1,4 @@
-let userList = []
-
-
+let userList = [];
 
 class User{
     constructor (firstName, lastName, email, age, address, password, cardNumber,phone, color){ 
@@ -109,6 +107,25 @@ function displayError(msg2) {
 function hideError() {
     $("#loginError").addClass("hide");
 
+}
+function userLog() {
+    let inputEmail= $('#txtEmail').val();
+    let inputPassword= $('#txtPassword').val();
+    let users = readUsers();
+    let user= login();
+    let valid=true;
+    for (let i = 0; i < users.length; i++) {
+        if(users[i].email === inputEmail && users[i].password === inputPassword)
+        {   
+            user=valid;
+            window.location="user.html";
+            
+        
+        }else{
+            console.log("Please login first");
+            return window.location="index.html";
+        }
+    }
 }
 function init() {
    console.log("Registration");

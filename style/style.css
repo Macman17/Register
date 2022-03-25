@@ -1,3 +1,4 @@
+/** Gobal **/
 html{
     padding: 0;
     margin: 0;
@@ -10,15 +11,51 @@ body{
 }
 h1{
     color: white;
+    text-shadow: 1px 1px 1px black;
     background-color: cyan;
     text-align: center;
     padding: 1rem;
 }
+nav{
+    padding-bottom: .1rem;
+}
+.nav-bar{
+    margin-right: 1rem;
+    margin-left: 55rem;
+    justify-content: space-around;
+}   
+.links-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 600px;
+}
+.links-container a{
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+.links-container a:last-of-type{
+    margin-right: 20px;
+   
+}
+
+/** Register page **/
 .capture-form{
-    background-color: white;
-    box-shadow: 1px 1px 1px gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.534);
+    box-shadow: 2px 2px 2px black;
     width: 40rem;
-    padding: 2rem;
+    margin-left: 20rem;
+    margin-right: 15rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     border-radius: 1rem;
 }
 .capture-form h3{
@@ -34,26 +71,34 @@ h1{
     display: inline-block;
     width: 10rem;
     text-align: right;
+    font-size: larger;
+    font-weight: 900;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .input-container input{
     display: inline-block;
-    width: 20rem;
-    margin-left: 1rem;
+    width: 15rem;
+    margin: .2rem;
+    padding-top: .6rem;
+    border-radius: .5rem;
+    text-align: center;
 
 }
 #btnReg{
-    display: inline-block;
-    padding: .8rem;
-    border-radius: .5rem;
-    margin-left: 10rem;
-    text-decoration: none;
-    font-family: Arial;
-    text-transform: uppercase;
-    color: white;
-    background-color: cyan;
-    text-align: center;
-    border: none;
     width: 10rem;
+    margin-left: 14rem;
+    border-radius: .5rem;
+    padding: .4rem;
+    background-color: cyan;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 700;
+    font-size: larger;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+#btnReg:hover{
+    background-color: black; 
+    transition:all .3s ease-in; 
 }
 .alert-error{
     border: 1px solid red;
@@ -70,6 +115,11 @@ h1{
     display: none;
 }
 /** Login page **/
+.nav-bar1{
+    margin-right: 1rem;
+    margin-left: 55rem;
+    justify-content: space-around;
+} 
 .logAlert-error{
     border: 1px solid red;
     background-color: crimson;
@@ -84,4 +134,88 @@ h1{
 .hide{
     display: none;
 }
-/*
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.534);
+    box-shadow: 2px 2px 2px black;
+    width: 28rem;
+    margin-left: 26rem;
+    margin-right: 20rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+}
+.login-form h3{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem;
+}
+.login-form .input-container{
+    padding: .3rem;
+    
+}
+.login-form .input-container label{
+    display: inline-block;
+    width: 6rem;
+    text-align: right;
+    font-size: larger;
+    font-weight: 900;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.login-form .input-container input{
+    display: inline-block;
+    width: 15rem;
+    margin: .2rem;
+    padding-top: .6rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+#logBtn{
+    width: 10rem;
+    margin-left: 9rem;
+    border-radius: 2rem;
+    padding: .4rem;
+    background-color: cyan;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 700;
+    font-size: larger;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+#logBtn:hover{
+    background-color: black; 
+    transition:all .3s ease-in; 
+}
+#userBtn{
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    border: none;
+    background-color: azure; 
+    border-radius: 2rem;
+    padding: .5rem;
+ 
+}
+#userBtn:hover{
+    background-color: cyan; 
+    transition:all .3s ease-in; 
+}
+/** User page **/
+.tblUser{
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-evenly;
+}
+tr{
+    border:2px solid black;
+}
+
+tr:hover{
+    background-color: dodgerblue;
+}
