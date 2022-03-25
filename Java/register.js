@@ -1,5 +1,7 @@
 let userList = []
 
+
+
 class User{
     constructor (firstName, lastName, email, age, address, password, cardNumber,phone, color){ 
         this.firstName = firstName;
@@ -80,10 +82,38 @@ function register(){
     }
     
 }
+function login() {
+    let inputEmail= $('#txtEmail').val();
+    let inputPassword= $('#txtPassword').val();
+    let users = readUsers();
+    console.log(inputEmail,inputPassword)
+    for (let i = 0; i < users.length; i++) {
+        if(users[i].email === inputEmail && users[i].password === inputPassword)
+        {
+            window.location = "user.html";
+        }
+        else{
+            displayError();
+            txtPass.css("border","2px solid green");//jquery function
+            hideError();
+            console.error("Min:6 characters");
+            
+        }  
+    }
+}
+function displayError(msg2) {
+    //console.error("missing data");
+        $("#loginError").removeClass("hide").text(msg2);
+        
+}
+function hideError() {
+    $("#loginError").addClass("hide");
+
+}
 function init() {
    console.log("Registration");
     //hook events
-    $("#txtPassword").change(validatePass);
+    $(".capture-form #txtPassword").change(validatePass);
 }
 window.onload=init;
  

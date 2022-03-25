@@ -6,8 +6,8 @@
 
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>Page Title</title>
+    
+    <title>Home</title>
 </head>
 <body>
     <header>
@@ -21,7 +21,28 @@
     </header>
     <main>
         <!--The user can only access to this information if is logged-->
+        <form class="login-form" action="#">
+            <h3>LOGIN HERE</h3>
+            <p id="loginError" class="logAlert-error hide">
+                Email or Password is incorrect!
+            </p>
+            <div class="input-container">
+                <label for="Email">Email:</label>
+                <input type="email" id="txtEmail" placeholder="Enter Email Address">
+            </div>
+            <div class="input-container">
+                <label for="Password">Password:</label>
+                <input type="password" id="txtPassword" placeholder="Enter Password">
+            </div>
+
+            <button type="button" id="logBtn" onclick="login()">Login</button>
+
+        </form>
         <!--Display users table--> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="Java/storeManger.js"></script>
+        <script src="Java/register.js"></script>
+        </script>
     </main>
 </body>
 </html>

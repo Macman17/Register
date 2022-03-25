@@ -5,7 +5,7 @@ function saveUser(user) {
     //marge old and new data
     data.push(user);
     //save
-    let val= JSON.stringify(user);//parse into a JSON String
+    let val= JSON.stringify(data);//parse into a JSON String
     localStorage.setItem(LS_KEY,val);//send the string to the local storage
 }
 function readUsers() {
@@ -18,4 +18,12 @@ function readUsers() {
         let list=JSON.parse(data);//obj
         return list;
     }
+}
+function remove(index) {
+    let data=readUsers();
+    //we remove the user in the given index from the array data
+    data.splice(index, 1);//must have the specific index and how many to delete
+    //save
+    let val= JSON.stringify(data);//parse into a JSON String
+    localStorage.setItem(LS_KEY,val);
 }
