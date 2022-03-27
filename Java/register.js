@@ -81,6 +81,7 @@ function register(){
     
 }
 function login() {
+    let txtPass2=$("#txtPassword");
     let inputEmail= $('#txtEmail').val();
     let inputPassword= $('#txtPassword').val();
     let users = readUsers();
@@ -91,9 +92,9 @@ function login() {
             window.location = "user.html";
         }
         else{
+        
+            txtPass2.css("border","2px solid red");//jquery function
             displayError();
-            txtPass.css("border","2px solid green");//jquery function
-            hideError();
             console.error("Min:6 characters");
             
         }  
